@@ -24,8 +24,8 @@ from sqlalchemy.orm import sessionmaker
 
 app = Flask(__name__)
 moment = Moment(app)
-app.config.from_object('config')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# app.config.from_object('config')
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.debug = False
 
 # app = Flask(__name__)
