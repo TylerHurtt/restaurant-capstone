@@ -1,1 +1,1 @@
-export DATABASE_URL=postgres://eqilwyxeajquxm:4071fa93ffa7ee28ffd6c490b386dcd70eeab0fa1cce23afa64c93fd4ade1940@ec2-54-158-222-248.compute-1.amazonaws.com:5432/d670enjhnd0lir
+# export DATABASE_URL=postgres://eqilwyxeajquxm:4071fa93ffa7ee28ffd6c490b386dcd70eeab0fa1cce23afa64c93fd4ade1940@ec2-54-158-222-248.compute-1.amazonaws.com:5432/d670enjhnd0lir
