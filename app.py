@@ -16,7 +16,6 @@ from flask_migrate import Migrate
 from datetime import date, datetime
 from sqlalchemy import Column, Integer, String, join
 from sqlalchemy.orm import sessionmaker
-import models
 
 
 #----------------------------------------------------------------------------#
