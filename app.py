@@ -16,6 +16,7 @@ from flask_migrate import Migrate
 from datetime import date, datetime
 from sqlalchemy import join
 from sqlalchemy.orm import sessionmaker
+import models
 
 
 #----------------------------------------------------------------------------#
@@ -26,6 +27,7 @@ app = Flask(__name__)
 moment = Moment(app)
 app.config.from_object('config')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.debug = False
 db = SQLAlchemy(app)
 
 # app = Flask(__name__)
