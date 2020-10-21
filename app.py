@@ -14,7 +14,7 @@ from logging import Formatter, FileHandler
 from flask_wtf import Form
 from flask_migrate import Migrate
 from datetime import date, datetime
-from sqlalchemy import join
+from sqlalchemy import Column, Integer, String, join
 from sqlalchemy.orm import sessionmaker
 import models
 
@@ -41,6 +41,60 @@ db = SQLAlchemy(app)
 # TODO: connect to a local postgresql database
 
 migrate = Migrate(app, db)
+
+
+#----------------------------------------------------------------------------#
+# Models
+#----------------------------------------------------------------------------#
+
+'''
+Wait staff
+'''
+
+
+class Staff(db.Model):
+    __tablename__ = 'Staff'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    position = Column(String)
+    # availability = ##something
+
+    def __init__(self, name, position=""):
+        self.name = name
+        self.position = position
+
+    def format(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'position': self.position}
+
+
+'''
+Shifts
+'''
+
+
+class Shift(db.Model):
+    __tablename__ = 'Shifts'
+
+    id = Column(Integer, primary_key=True)
+    # employeeID = Column(String)
+    position = Column(String)
+    # time = Column(Datetime)
+    # day = Column(string)
+    # dateTime = day & time
+
+    def __init__(self, name, position=""):
+        self.name = name
+        self.position = position
+
+    def format(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'position': self.position}
 
 
 @app.route('/')
