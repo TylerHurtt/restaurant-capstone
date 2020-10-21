@@ -28,7 +28,6 @@ moment = Moment(app)
 app.config.from_object('config')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.debug = False
-db = SQLAlchemy(app)
 
 # app = Flask(__name__)
 

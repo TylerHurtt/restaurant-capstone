@@ -1,7 +1,9 @@
-from sqlalchemy import Column, String, Integer, create_engine
+from sqlalchemy import Column, String, Integer, create_engine, join
+from sqlalchemy.orm import sessionmaker
 from flask_sqlalchemy import SQLAlchemy
 import json
 import os
+from app import app, db
 
 '''
 Wait staff
